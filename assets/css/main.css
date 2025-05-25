@@ -120,6 +120,10 @@ input, select, textarea {
 			border-bottom-color: transparent;
 		}
 
+		a h3 {
+			color: inherit !important;
+		}
+
 	strong, b {
 		color: #ffffff;
 		font-weight: 300;
