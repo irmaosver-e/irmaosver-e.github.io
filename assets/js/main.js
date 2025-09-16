@@ -39,6 +39,9 @@
 			alignment: 'right',
 			hideDelay: 350
 		});
+	
+	//test
+	$('#hacklinks').load("../ROMhacks/HackLinks.html");
 
 	// Nav.
 
@@ -246,5 +249,6 @@
 
 		$banner
 			._parallax();
+
 
 })(jQuery);
