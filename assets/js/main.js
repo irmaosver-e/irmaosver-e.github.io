@@ -41,7 +41,7 @@
 		});
 	
 	//test
-	$('#hacklinks').load("./HackLinks.html");
+	$('#hacklinks').load("HackLinks.html");
 
 	// Nav.
 
@@ -252,5 +252,6 @@
 
 
 })(jQuery);
+
 
 
