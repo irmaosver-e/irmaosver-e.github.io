@@ -35,13 +35,19 @@
 		});
 		
 	// Dropdowns.
-		$('#nav > ul').dropotron({
-			alignment: 'right',
-			hideDelay: 350
-		});
+	//	$('#nav > ul').dropotron({
+	//		alignment: 'right',
+	//		hideDelay: 350
+	//	});
 
 	//ROM hack links
-	$('#hacklinks').load("/ROMhacks/HackLinks.html");
+	$('#hacklinks').load("/ROMhacks/HackLinks.html", function () {
+    	// Now that the menu is loaded, run dropotron
+    	$('#nav > ul').dropotron({
+        	alignment: 'right',
+        	hideDelay: 350
+    	});
+	});
 	// Nav.
 
 		// Title Bar.
@@ -251,6 +257,7 @@
 
 
 })(jQuery);
+
 
 
 
