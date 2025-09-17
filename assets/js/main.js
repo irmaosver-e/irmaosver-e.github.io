@@ -40,7 +40,7 @@
 			hideDelay: 350
 		});
 
-	//test
+	//ROM hack links
 	$('#hacklinks').load("/ROMhacks/HackLinks.html", function () {
 		    // Hide current page link
 		const current = window.location.pathname;
@@ -49,12 +49,12 @@
 				$(this).parent().hide();
 			}
 		});
-		
 		// Once loaded, initialise dropotron
         $('#nav > ul').dropotron({
             alignment: 'right',
             hideDelay: 350
         });
+	});
 	// Nav.
 
 		// Title Bar.
@@ -264,6 +264,7 @@
 
 
 })(jQuery);
+
 
 
 
