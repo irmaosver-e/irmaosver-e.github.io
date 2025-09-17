@@ -41,7 +41,7 @@
 		});
 	
 	//test
-	$('#hacklinks').load("HackLinks.html");
+	$('#hacklinks').load("/ROMhacks/HackLinks.html");
 
 	// Nav.
 
@@ -252,6 +252,7 @@
 
 
 })(jQuery);
+
 
 
 
