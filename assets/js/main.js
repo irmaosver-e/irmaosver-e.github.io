@@ -42,13 +42,7 @@
 
 	//ROM hack links
 	$('#hacklinks').load("/ROMhacks/HackLinks.html", function () {
-		    // Hide current page link
-		const current = window.location.pathname;
-		$('#hacklinks a').each(function () {
-			if ($(this).attr('href') === current) {
-				$(this).parent().hide();
-			}
-		});
+
 		// Once loaded, initialise dropotron
         $('#nav > ul').dropotron({
             alignment: 'right',
@@ -264,6 +258,7 @@
 
 
 })(jQuery);
+
 
 
 
