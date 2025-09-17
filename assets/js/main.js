@@ -41,14 +41,7 @@
 		});
 
 	//ROM hack links
-	$('#hacklinks').load("/ROMhacks/HackLinks.html", function () {
-
-		// Once loaded, initialise dropotron
-        $('#nav > ul').dropotron({
-            alignment: 'right',
-            hideDelay: 350
-        });
-	});
+	$('#hacklinks').load("/ROMhacks/HackLinks.html");
 	// Nav.
 
 		// Title Bar.
@@ -258,6 +251,7 @@
 
 
 })(jQuery);
+
 
 
 
