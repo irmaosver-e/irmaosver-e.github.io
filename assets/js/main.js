@@ -34,14 +34,13 @@
 			speed: 2000
 		});
 
+		//test
+	$('#hacklinks').load("/ROMhacks/HackLinks.html");
 	// Dropdowns.
 		$('#nav > ul').dropotron({
 			alignment: 'right',
 			hideDelay: 350
 		});
-	
-	//test
-	$('#hacklinks').load("/ROMhacks/HackLinks.html");
 
 	// Nav.
 
@@ -252,6 +251,7 @@
 
 
 })(jQuery);
+
 
 
 
