@@ -42,12 +42,17 @@
 
 	//test
 	$('#hacklinks').load("/ROMhacks/HackLinks.html", function () {
-            // Hide current page link
-		const current = window.location.pathname;
-		$('#hacklinks a').each(function () {
-        if ($(this).attr('href') === current) {
-            $(this).parent().hide();
+    const current = window.location.pathname.split("/").pop(); 
+    // e.g. "DS.html"
+
+    $('#hacklinks a').each(function () {
+        const link = $(this).attr('href').replace("./", ""); 
+        // e.g. "DS.html"
+
+        if (link === current) {
+            $(this).parent().hide(); // hide the <li>
         }
+    });
 		// Once loaded, initialise dropotron
         $('#nav > ul').dropotron({
             alignment: 'right',
@@ -262,6 +267,7 @@
 
 
 })(jQuery);
+
 
 
 
