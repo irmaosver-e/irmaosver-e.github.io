@@ -33,15 +33,20 @@
 		$('.scrolly').scrolly({
 			speed: 2000
 		});
-
-		//test
-	$('#hacklinks').load("/ROMhacks/HackLinks.html");
+		
 	// Dropdowns.
 		$('#nav > ul').dropotron({
 			alignment: 'right',
 			hideDelay: 350
 		});
 
+	//test
+	$('#hacklinks').load("/ROMhacks/HackLinks.html", function () {
+        // Once loaded, initialise dropotron
+        $('#nav > ul').dropotron({
+            alignment: 'right',
+            hideDelay: 350
+        });
 	// Nav.
 
 		// Title Bar.
@@ -251,6 +256,7 @@
 
 
 })(jQuery);
+
 
 
 
