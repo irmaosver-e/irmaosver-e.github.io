@@ -42,12 +42,19 @@
 
 	//ROM hack links
 	$('#hacklinks').load("/ROMhacks/HackLinks.html", function () {
+		const current = window.location.pathname;
+    	$('#hacklinks a').each(function () {
+        	if ($(this).attr('href') === current) {
+            	$(this).parent().hide();
+        	}
+    	});
     	// Now that the menu is loaded, run dropotron
     	$('#nav > ul').dropotron({
         	alignment: 'right',
         	hideDelay: 350
     	});
 	});
+	
 	// Nav.
 
 		// Title Bar.
@@ -257,6 +264,7 @@
 
 
 })(jQuery);
+
 
 
 
