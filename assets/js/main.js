@@ -42,10 +42,11 @@
 
 	//ROM hack links
 	$('#hacklinks').load("/ROMhacks/HackLinks.html", function () {
-		const current = window.location.pathname;
+    	const currentFile = window.location.pathname.split("/").pop() || "index.html"; // "CS.html"
     	$('#hacklinks a').each(function () {
-        	if ($(this).attr('href') === current) {
-            	$(this).parent().hide();
+        	const linkFile = $(this).attr('href').split("/").pop(); // "CS.html"
+        	if (linkFile === currentFile) {
+            	$(this).parent().hide(); // hide <li>
         	}
     	});
     	// Now that the menu is loaded, run dropotron
@@ -264,6 +265,7 @@
 
 
 })(jQuery);
+
 
 
 
