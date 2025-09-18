@@ -41,39 +41,37 @@
 	//	});
 
 	//ROM hack links
-	$('#hacklinks').load("/ROMhacks/HackLinks.html", function () {
-    	const currentFile = window.location.pathname.split("/").pop() || "index.html"; // "CS.html"
-    	$('#hacklinks a').each(function () {
-        	const linkFile = $(this).attr('href').split("/").pop(); // "CS.html"
-        	if (linkFile === currentFile) {
-            	$(this).parent().remove(); // hide <li>
-        	}
-    	});
-    	// Now that the menu is loaded, run dropotron
-    	$('#nav > ul').dropotron({
-        	alignment: 'right',
-        	hideDelay: 350
-    	});
-
-		// Mobile nav rebuild (important!)
-    	$('#navPanel').remove(); // remove old panel if it exists
-		$(
-			'<div id="navPanel">' +
-				'<nav>' +
-					$('#nav').navList() +
-				'</nav>' +
-			'</div>'
-		).appendTo($body).panel({
-			delay: 500,
-			hideOnClick: true,
-			hideOnSwipe: true,
-			resetScroll: true,
-			resetForms: true,
-			side: 'left',
-			target: $body,
-			visibleClass: 'navPanel-visible'
+		$('#hacklinks').load("/ROMhacks/HackLinks.html", function () {
+	    	const currentFile = window.location.pathname.split("/").pop() || "index.html"; // "CS.html"
+	    	$('#hacklinks a').each(function () {
+	        	const linkFile = $(this).attr('href').split("/").pop(); // "CS.html"
+	        	if (linkFile === currentFile) {
+	            	$(this).parent().remove(); // hide <li>
+	        	}
+	    	});
+	    	// Now that the menu is loaded, run dropotron
+	    	$('#nav > ul').dropotron({
+	        	alignment: 'right',
+	        	hideDelay: 350
+	    	});
+	
+			$(
+				'<div id="navPanel">' +
+					'<nav>' +
+						$('#nav').navList() +
+					'</nav>' +
+				'</div>'
+			).appendTo($body).panel({
+				delay: 500,
+				hideOnClick: true,
+				hideOnSwipe: true,
+				resetScroll: true,
+				resetForms: true,
+				side: 'left',
+				target: $body,
+				visibleClass: 'navPanel-visible'
+			});
 		});
-	});
 	
 	// Nav.
 
@@ -86,27 +84,28 @@
 			)
 				.appendTo($body);
 
-	
 
-		// Panel.
-			$(
-				'<div id="navPanel">' +
-					'<nav>' +
-						$('#nav').navList() +
-					'</nav>' +
-				'</div>'
-			)
-				.appendTo($body)
-				.panel({
-					delay: 500,
-					hideOnClick: true,
-					hideOnSwipe: true,
-					resetScroll: true,
-					resetForms: true,
-					side: 'left',
-					target: $body,
-					visibleClass: 'navPanel-visible'
-				});
+			if ($('#hacklinks').length === 0) {
+			// Panel.
+				$(
+					'<div id="navPanel">' +
+						'<nav>' +
+							$('#nav').navList() +
+						'</nav>' +
+					'</div>'
+				)
+					.appendTo($body)
+					.panel({
+						delay: 500,
+						hideOnClick: true,
+						hideOnSwipe: true,
+						resetScroll: true,
+						resetForms: true,
+						side: 'left',
+						target: $body,
+						visibleClass: 'navPanel-visible'
+					});
+			}
 
 	// Parallax.
 	// Disabled on IE (choppy scrolling) and mobile platforms (poor performance).
@@ -286,6 +285,7 @@
 
 
 })(jQuery);
+
 
 
 
