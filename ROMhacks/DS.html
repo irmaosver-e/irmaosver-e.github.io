@@ -9,9 +9,9 @@
 		<title>Nani's Portfolio - Rom Hack</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="icon" href="./assets/css/images/fotnsIcon2.png" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="/assets/css/main.css" />
+		<link rel="icon" href="/assets/css/images/fotnsIcon2.png" />
+		<noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
 		<div id="page-wrapper">
@@ -21,13 +21,9 @@
 					<h1 id="logo"><a href="#main" class="scrolly">Nani's Portfolio - Rom Hack</a></h1>
 					<nav id="nav">
 						<ul>
-							<li>
-								<li><a href="./index.html" >Home</a></li>
-								<li><a href="./FOTNS.html" >Fist of the North Star</a></li>
-								<li><a href="./MD.html" >Peacock King 2</a></li>
-								<li><a href="./SGTH.html" >Spot Goes to Hollywood</a></li>
-							    <li><a href="./EDR.html" >Eliminate Down</a></li>
-								<li><a href="./NBAJTE.html" >NBA Jam TE</a></li>
+							<li><a href="/index.html" >Home</a></li>
+							<li><a href="/HACKS.html" >ROM Hacks</a>
+								<ul id="hacklinks"></ul>
 							</li>
 						</ul>
 					</nav>
@@ -62,7 +58,7 @@
 									<br>You can apply the patch using this online tool: <a href="https://www.romhacking.net/patch/" target="_blank">https://www.romhacking.net/patch/</a></p>
 
 								<h3>Why “Desert Strike”?</h3>
-								<p> Desert Strike is a game I’ve always loved and frequently return to. While the SRAM patch by <a href="https://www.romhacking.net/hacks/5740/" target="_blank">"Billy Time!"</a> was a great improvement, I felt there was room for further enhancements. So, I decided to build on it by leveraging the original password system to store the best play session for each stage based on points. Additionally, the game now tracks which stages the player has cleared and unlocks them accordingly.</p>
+								<p> Desert Strike is a game I’ve always loved and frequently return to. While the SRAM patch by <a href="https://www.romhacking.net/hacks/5740/" target="_blank">"Billy Time!"</a> was a great improvement; I felt there was room for further enhancements. So, I decided to build on it by leveraging the original password system to store the best play session for each stage based on points. Additionally, the game now tracks which stages the player has cleared and unlocks them accordingly.</p>
 								<p>Another area that always bothered me was the copilot descriptions. While they added realism to the game, they didn’t clearly convey how each copilot impacted gameplay. To me, it often felt like the copilot choice didn’t really make a difference. I initially thought this information could be included in the manual, but after searching the web and coming up empty, I decided to dive into the game’s code. There, I uncovered how each copilot actually influenced gameplay and added this crucial info to their descriptions in the game.</p>
 								<p>While exploring further, I also discovered unused code for altitude controls, which had never been implemented. I seized the opportunity to activate this feature, but only for players using a 6-button controller. Additionally, I made strafing more intuitive by mapping it to the "MODE" shoulder button, which significantly enhanced the gameplay experience.</p>								
 								
@@ -74,14 +70,14 @@
 									<li>6 button support.</li>
 									<li>implements the unused altitude control code found in the original ROM</li>
 									<li>Copilot bios shortened/altered to reflect their effect on the rage attributes.</li>
-									<li>A description of the copilot range attributes was added to the bio.</li>
-									<li>copilot winch activation values spread further apart to have a more obvious difference in gameplay.</li>
-									<li>copilots are marked as TDY (Temporary Duty Yonder) until unlocked by clearing missions in “campaign mode”</li>
+									<li>A description of the copilot range attributes was added to the bio. </li>
+									<li> Copilot winch activation values spread further apart to have a more obvious difference in gameplay.</li>
+									<li> Copilots are marked as TDY (Temporary Duty Yonder) until unlocked by clearing missions in “campaign mode”</li>
 									<li>The location of MIA copilot “Carlos” was changed.</li>
-									<li>Copilot select menu activated at every stage change unless starting stage from the main menu with a non-MIA copilot.</li>
+									<li>Copilot select menu is activated at every stage change unless starting stage from the main menu with a non-MIA copilot.</li>
 									<li>flying the helicopter without a copilot sets range attributes to very low</li>
 									<li>number of lives carried over to the next stage.</li>
-									<li>The game restarts to the title screen after the game over screen.</li>
+									<li>The game restarts to the title screen after the game-over screen.</li>
 								</ul>
 								<p>The full list of changes <a href="https://github.com/irmaosver-e/DesertStrikeMDHack" target="_blank">HERE</a></p>
 								
@@ -102,7 +98,7 @@
 					<ul class="icons">
 						<li><a href="https://www.linkedin.com/in/ernani-dsc/" target="_blank" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
 						<li><a href="https://github.com/irmaosver-e" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-						<li><a href="CF.html" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+						<li><a href="/CF.html" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
 					</ul>
 					<ul class="copyright">
 						<li>&copy; Landed. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
@@ -113,15 +109,16 @@
 		</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/jquery.scrolly.min.js"></script>
+			<script src="/assets/js/jquery.dropotron.min.js"></script>
+			<script src="/assets/js/jquery.scrollex.min.js"></script>
+			<script src="/assets/js/browser.min.js"></script>
+			<script src="/assets/js/breakpoints.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
 
 	</body>
 </html>
+
 
