@@ -46,7 +46,7 @@
     	$('#hacklinks a').each(function () {
         	const linkFile = $(this).attr('href').split("/").pop(); // "CS.html"
         	if (linkFile === currentFile) {
-            	$(this).parent().hide(); // hide <li>
+            	$(this).parent().remove(); // hide <li>
         	}
     	});
     	// Now that the menu is loaded, run dropotron
@@ -283,6 +283,7 @@
 
 
 })(jQuery);
+
 
 
 
