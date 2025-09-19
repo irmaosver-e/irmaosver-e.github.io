@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DesertStrikeMDHack</title>
+</head>
+<body>
+  <h1>DesertStrikeMDHack</h1>
+  <p>Rom hack of <strong>Desert Strike</strong> for the Mega Drive adding 6-button + SRAM support</p>
+
+  <h2>Please consider supporting:</h2>
+  <p>
+    <a href="https://www.buymeacoffee.com/nani16bit" target="_blank">
+      <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" width="150" alt="Buy Me a Coffee" />
+    </a>
+    or
+    <a href="https://github.com/sponsors/irmaosver-e" target="_blank">
+      <img src="https://img.shields.io/badge/GitHub%20Sponsors-brightgreen" width="215" alt="GitHub Sponsors" />
+    </a>
+  </p>
+
+  <h2>Version History</h2>
+  <ul>
+    <li><strong>v1.4</strong>
+      <ul><li>Bug fix - overriding a save of a previously cleared stage would lock following unlocked stages</li></ul>
+    </li>
+    <li><strong>v1.3</strong>
+      <ul><li>Bug fix - stage 3 mission 8 bus not turning when mode pressed</li></ul>
+    </li>
+    <li><strong>v1.2</strong>
+      <ul>
+        <li>Bug fix - loading campaign still has MIA copilot locked after rescued.</li>
+        <li>Bug fix - mission 3 shows 2 power plants on the map.</li>
+        <li>Bazooka soldier height value adjusted to fix collision with the chopper on a lower altitude</li>
+      </ul>
+    </li>
+    <li><strong>v1.1</strong>
+      <ul><li>Bug fix - mission 4 unlocked shows a random high score.</li></ul>
+    </li>
+  </ul>
+
+  <h2>Required Original ROM</h2>
+  <ul>
+    <li><strong>SHA-1:</strong> D7E7D8C358EB845B84FB08F904CC0B95D0A4053D</li>
+    <li><strong>CRC32:</strong> 67A9860B</li>
+  </ul>
+
+  <h2>Hack Features</h2>
+  <ul>
+    <li>A more robust save system, "campaign mode"</li>
+    <li>Stages unlocked in main menu when cleared in "campaign mode"</li>
+    <li>Per stage high score displayed</li>
+    <li>6-button support</li>
+    <li>Implements unused altitude control code found in original ROM</li>
+    <li>Copilot bios shortened/altered to reflect rage attribute effects</li>
+    <li>Copilot range attributes described in bios</li>
+    <li>Copilot winch activation values spaced further for clearer gameplay effect</li>
+    <li>Copilots marked as TDY (Temporary Duty Yonder) until unlocked</li>
+    <li>Location of MIA copilot "Carlos" changed</li>
+    <li>Copilot select menu triggered unless stage started with non-MIA copilot</li>
+    <li>No copilot results in very low range attributes</li>
+    <li>Lives carried over between stages</li>
+    <li>Game restarts to title screen after game over</li>
+  </ul>
+
+  <h2>Controls</h2>
+  <pre>
+Holding "Mode"           = Strafing (enables strafing and missile fire)
+Holding "Mode" + X       = Lower altitude
+Holding "Mode" + Y       = Reset altitude towards default
+Holding "Mode" + Z       = Increase altitude
+  </pre>
+
+  <h2>Copilot Effects</h2>
+  <p>The copilot's effect on helicopter behavior was not documented. After reverse engineering, it was found that:</p>
+  <ul>
+    <li>Each copilot affects target auto-lock distance and winch activation radius</li>
+    <li>These attributes are now displayed in their bios</li>
+    <li>Winch activation ranges have been spaced further to have noticeable gameplay impact</li>
+  </ul>
+
+  <h2>SRAM Support: "Campaign Mode" and "Practice Mode"</h2>
+  <h3>General</h3>
+  <ul>
+    <li>Cleared levels become selectable on the main menu</li>
+    <li>Original password system is retained</li>
+    <li>Saving happens at the cleared stage screen showing the password</li>
+  </ul>
+
+  <h3>"Campaign Mode" Entry</h3>
+  <ol>
+    <li>Select an unlocked stage on the main menu</li>
+    <li>Press "A" to load the SRAM-saved password</li>
+    <li>Press "Start" to return to menu with stage select disabled</li>
+    <li>Press "Start" again to begin in campaign mode</li>
+    <li>To cancel, modify the password and press enter; stage select will be re-enabled</li>
+    <li>Choose an unlocked copilot — if MIA, the copilot selection screen appears</li>
+  </ol>
+
+  <h3>"Campaign Mode" Explained</h3>
+  <ul>
+    <li>Always active when starting from stage 1</li>
+    <li>Saves copilot state, number of lives, and score</li>
+    <li>Saved scores are more accurate than original password scores</li>
+    <li>New saves only overwrite if current score is higher</li>
+  </ul>
+
+  <h3>"Practice Mode" Explained</h3>
+  <ul>
+    <li>Starts with 3 lives (or more with extra life password)</li>
+    <li>Stage score starts at 0 or password-defined value</li>
+    <li>Clearing a stage leads to the next but no save occurs</li>
+    <li>Stages cleared don't unlock for main menu selection</li>
+    <li>Copilots unlocked only for current session</li>
+    <li>MIA copilots found only remain unlocked for current playthrough</li>
+    <li>MIA copilots not unlocked from non-SRAM passwords</li>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fist of the North Star ROM Hack Changelog</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      background-color: #fefefe;
+      color: #222;
+    }
+    h1, h2 {
+      color: #333;
+    }
+    h1 {
+      border-bottom: 2px solid #444;
+      padding-bottom: 0.25em;
+    }
+    h2 {
+      margin-top: 2em;
+      color: #1a1a1a;
+    }
+    ul {
+      margin-top: 0.5em;
+      padding-left: 1.5em;
+    }
+    li {
+      margin-bottom: 0.3em;
+    }
+    .note {
+      font-style: italic;
+      margin-top: 0.5em;
+      color: #555;
+    }
+    .support {
+      margin-bottom: 2em;
+      text-align: center;
+    }
+    .support a {
+      display: inline-block;
+      margin: 0.5em;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="support">
+    <p><strong>Please consider supporting:</strong></p>
+    <a href="https://www.buymeacoffee.com/nani16bit" target="_blank">
+      <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" width="150" alt="Buy Me a Coffee">
+    </a>
+    <a href="https://github.com/sponsors/irmaosver-e" target="_blank">
+      <img src="https://img.shields.io/badge/GitHub%20Sponsors-brightgreen" width="215" alt="GitHub Sponsors">
+    </a>
+  </div>
+
+  <h1>FOTNS<br><small>ROM Hack of <i>Hokuto no Ken</i> for the Sega Mega Drive</small></h1>
+  <p><strong>Patch by Ernani da S. Costa</strong></p>
+  <p class="note">All patch versions are based on older versions, so only patch the version you want for all features up to that version.</p>
+
+  <h2>v2.1.2</h2>
+  <ul>
+    <li>HUD redesign moves time to the centre and adds a hi-score (previously tracked but not displayed)</li>
+    <li>Hi-score SRAM feature added</li>
+    <li>Off-centre title text adjusted</li>
+  </ul>
+
+  <h2>v2.1.1</h2>
+  <ul>
+    <li>Title screen background added</li>
+    <li>Disabled death by time; health now decreases to 1 instead</li>
+    <li>Title logo and subtext now change based on hardware version (JP or EN)</li>
+  </ul>
+
+  <h2>v2.1</h2>
+  <ul>
+    <li>Fixed Geira stage cloud movement bug</li>
+    <li>Bask’s forehead cross now matches manga design</li>
+    <li>Fixed boomerang guy glitch when hit by his own boomerang</li>
+    <li>Extra life system now shows death animation and respawn on map</li>
+    <li>Chapter 4 stage 1 special enemy now respawns like others</li>
+    <li>New path added from Chapter 4 dungeon to Leia’s stage</li>
+    <li>Fixed small boat arrow glitch in Chapter 3 when loading from stage select</li>
+  </ul>
+
+  <h2>v2.0</h2>
+  <ul>
+    <li>Faster chapter transitions</li>
+    <li>Dungeon axe collision disabled after hit</li>
+    <li>Dungeon layout and logic fully redesigned with new graphics</li>
+    <li>Item pickups added to dungeon</li>
+    <li>Wall holes and doors in dungeons now functional</li>
+    <li>Revised Kenshiro's hit gravity and jumping logic</li>
+    <li>Added enhanced jumping and forward boost near ledges</li>
+    <li>Han fight now triggered manually by pressing up at the door</li>
+    <li>Han and Falco attack patterns rebalanced for fairness</li>
+    <li>HUD redesigned; map status now shows percentage values</li>
+    <li>Hyo & Kaioh shadow column attacks can now be dodged</li>
+    <li>Akashachi’s claw can’t be deflected anymore</li>
+    <li>Flamethrowers no longer extinguished by attack</li>
+    <li>Point system fully implemented</li>
+    <li>Extra lives at 3000, 6000, 9000, 12000 points</li>
+    <li>Started game with lower max HP to accommodate pickups</li>
+    <li>Power meter now scales evenly</li>
+    <li>Stage select now initializes values properly</li>
+    <li>Random side-spawn for special enemies and dungeon enemies</li>
+    <li>Boss health bar now reflects correct boss HP</li>
+  </ul>
+
+  <p class="note">Translation hacks v1.5 and below also available at <strong>ROMHacking.net</strong></p>
+
+  <h2>FONTS_ENG_PURIST</h2>
+  <ul>
+    <li>Original Japanese-to-English translation</li>
+    <li>Dialogue text box size increased</li>
+  </ul>
+
+  <h2>FONTS_ENG_ANIME v1.5</h2>
+  <ul>
+    <li>Story wall now has music</li>
+    <li>Intro SFX and animation timing adjusted</li>
+    <li>Extra life and lost life SFX added</li>
+    <li>Game Over SFX implemented</li>
+    <li>Rebalanced bosses and enemies for new life system</li>
+    <li>Falco and Han patterns rebalanced</li>
+    <li>Kaioh second form portrait bug fixed</li>
+  </ul>
+
+  <h2>v1.4</h2>
+  <ul>
+    <li>Fixed boomerang enemy facing right hitbox</li>
+    <li>Implemented extra life system via score</li>
+    <li>Improved Kenshiro’s air rebound logic</li>
+    <li>Restored Alph waterfall animation</li>
+    <li>Fixed missing HUD in 2nd Kaioh fight</li>
+    <li>Kaioh red now stronger and tougher</li>
+    <li>Fixed Shura hand animation glitch</li>
+  </ul>
+
+  <h2>v1.3.1</h2>
+  <ul>
+    <li>Added French language support characters</li>
+    <li>Stage select starts at Chapter 1 (purist patch)</li>
+  </ul>
+
+  <h2>v1.3</h2>
+  <ul>
+    <li>Trademark title text restored</li>
+    <li>New title sequence order: Sega → Title → Story → Attract</li>
+    <li>Fixed eagle dive height</li>
+    <li>More accent characters added</li>
+    <li>Fixed Akashachi name overflow</li>
+    <li>Adjusted enemy placement, recoil, and speed</li>
+    <li>Stage entry directions and character facing fixed</li>
+  </ul>
+
+  <h2>v1.2</h2>
+  <ul>
+    <li>Fixed stage select numbering</li>
+    <li>Expanded dialogue box size and memory space</li>
+    <li>Shortened, revised intro with better formatting</li>
+    <li>Boss fights now show names</li>
+  </ul>
+
+  <h2>v1.1</h2>
+  <ul>
+    <li>Fixed Kaioh’s name in the intro</li>
+    <li>Fixed flying axe collision</li>
+    <li>Fixed Chapter 2 dungeon skip bug</li>
+    <li>Removed black line on arrowhead</li>
+    <li>Adjusted Kenshiro and pirate hitboxes</li>
+  </ul>
+
+  <h2>v1.0</h2>
+  <ul>
+    <li>Stage order and dialogue restructured to match the anime</li>
+    <li>Updated map and locations graphics</li>
+    <li>Improved air enemy physics</li>
+    <li>Boss and enemy rebalance</li>
+    <li>Updated sound FX for Kenshiro</li>
+    <li>Increased walk speed</li>
+    <li>Improved screen scroll and boss mechanics</li>
+  </ul>
+
+  <h2>Included in All Patches:</h2>
+  <ul>
+    <li>Graphic fixes (mouth sprites, arrowhead, DEF values)</li>
+    <li>Translations for intro, chapter titles, and ending background</li>
+    <li>“Fist of the North Star” logo added</li>
+    <li>Slower intro scroll and reflowed text</li>
+    <li>Fixed Hokuto pillar and Kaioh armor graphics</li>
+  </ul>
+
+</body>
+</html>
